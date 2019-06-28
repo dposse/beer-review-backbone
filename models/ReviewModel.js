@@ -1,6 +1,15 @@
 var ReviewModel = Backbone.Model.extend({
-  defaults: {
-    name: '',
-    text: ''
+  idAttribute: '_id',
+
+  defaults: function() {
+    return {
+      name: '',
+      text: ''
+    }
+  },
+
+  getRidOfReview: function() {
+    debugger;
+    this.destroy({ wait: true });
   }
 });
